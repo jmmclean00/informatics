@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="text">Mini Project Three</h1>
+        <img src="../static/images/uga_eng_logo.png" alt="logo" class="logo">
+    </div>
+
+    <div>
+        <p>This application uses either a Yolo or Vision Transformer Model to predict the objects within an image.</p>
+        <br>
+        <p>Description of Models:</p>
+        <p>Yolo - detects and localizes objects within images by dividing the image into grid cells and predicting bounding boxes and class probabilities for each cell.</p>
+        <p>Vision Transformer - divides pictures into smaller parts and determines how these parts relate to each other in order to analyze the content within the images.</p>
+    </div>
+
+    <br><br><label>Upload an Image</label>
+    <form action="/upload_image" method="post" enctype="multipart/form-data">
+        <input type="file" name="imageUpload" accept="image/*" required>
+        <input type="submit" value="Upload Image">
+    </form>
+
+    {% if uploaded_image %}
+    <img src= {{ uploaded_image }} alt="Uploaded Image">
+    {% endif %}
+
+    <br><br><label>Select a Model</label>
+    <form action="/model" method="post">
+        <input id="yolo" type="submit" name="model_type" value="Yolo Model">
+        <input id="vision_transformer" type="submit" name="model_type" value="Vision Transformer Model">
+    </form>
+
+
+    <footer class="footer">
+        <p class="text">INFO 4160</p>
+    </footer>
+</body>
+
+</html>

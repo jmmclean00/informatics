@@ -1,0 +1,46 @@
+.layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 8px;
+  }
+  
+  .header { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .main { 
+    grid-area: main;
+    background-color: white;
+    border: 2px solid black;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    margin-top: auto; 
+  }
+  
+  .text {
+    font-size: 1.5em;
+  }
+  
+  .logo {
+    height: 80px;
+  }
+  
+  h2, p, label, input, submit {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+  }

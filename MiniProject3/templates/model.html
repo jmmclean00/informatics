@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Prediction</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="text">Mini Project One</h1>
+        <img src="../static/images/uga_eng_logo.png" alt="logo" class="logo">
+    </div>
+
+    <br><br>
+    <p>Result: {{ message }}</p>
+    <p>Accuracy: {{ accuracy }}%</p>
+
+    <form action="/predict" method="post">
+        <br><br><input type="submit" value="Run Prediction">
+        <input type="text" name="Test1" placeholder="Test1 Input" step="0.000001" required>
+        <input type="text" name="Test2" placeholder="Test2 Input"  step="0.000001" required><br><br>
+    </form>
+
+    <form action="/">
+        <input type="submit" value="Return Home"><br><br>
+    </form>
+
+    <footer class="footer">
+        <p class="text">INFO 4160</p>
+    </footer>
+</body>
+</html>
